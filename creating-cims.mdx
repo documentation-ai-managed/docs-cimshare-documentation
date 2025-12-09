@@ -1,0 +1,128 @@
+---
+title: Creating and Managing CIMs
+description: Step-by-step instructions for using AI to build, edit, and organize CIMs efficiently.
+---
+
+## Overview
+
+Cimshare simplifies Confidential Information Memorandum (CIM) creation for brokers and advisors. You input business notes and a website URL, and the AI generates a professional CIM. Review, edit, customize branding, and manage your library securely with password protection and custom URLs.
+
+<Callout kind="tip">
+  Start with detailed notes for the best AI results. Include key financials, market analysis, and growth projections.
+</Callout>
+
+## Step-by-Step CIM Creation
+
+Follow these steps to generate your first CIM using AI automation.
+
+<Steps>
+  <Step title="Enter Business Details" icon="edit-3">
+    Navigate to the Dashboard and click `Create New CIM`.
+
+    Provide:
+    - Business notes (e.g., "Tech startup with 50% YoY growth, $5M ARR, seeking $10M Series A")
+    - Website URL (e.g., `https://exampletech.com`)
+
+    Click `Generate with AI`.
+  </Step>
+  <Step title="Review AI Output" icon="eye">
+    The platform scrapes the website and combines it with your notes to produce a draft CIM.
+
+    Scan sections like Executive Summary, Financials, and Market Opportunity.
+  </Step>
+  <Step title="Save Draft" icon="save">
+    Save as a draft or publish directly. Add eSignature fields if needed.
+  </Step>
+</Steps>
+
+## Reviewing and Editing Content
+
+AI generates high-quality drafts, but you control the final version. Use the editor to refine content.
+
+<Tabs>
+  <Tab title="Basic Edits" icon="edit">
+    Modify text directly in the WYSIWYG editor. Highlight sections to regenerate with AI prompts like "Expand on SDE analysis".
+
+    ```markdown
+    ## Financial Highlights
+    - ARR: $5.2M (up 48% YoY)
+    - EBITDA Margin: 25%
+    ```
+  </Tab>
+  <Tab title="Advanced Customization" icon="settings">
+    Upload logos, adjust color schemes (default: `#ed8769`), and add custom sections.
+
+    <Expandable title="Branding Options">
+      - Primary Color: `#ed8769`
+      - Font: Inter or custom upload
+      - Header: Company logo (PNG/SVG, `<200KB`)
+    </Expandable>
+  </Tab>
+</Tabs>
+
+<Callout kind="info">
+  Enable SDE analysis in settings for automated Seller's Discretionary Earnings calculations from your notes.
+</Callout>
+
+## Sharing and Managing CIMs
+
+Share CIMs securely via custom URLs or embeds. Manage your library efficiently.
+
+<Columns cols={2}>
+  <Card title="Custom Sharing" icon="share-2" href="/docs/sharing">
+    Generate password-protected links like `cimshare.com/cim/abc123-xyz`.
+  </Card>
+  <Card title="Embed in CRM" icon="link">
+    Copy embed code for your CRM or website.
+  </Card>
+  <Card title="Library Organization" icon="folder">
+    Tag CIMs (e.g., "Tech", "Healthcare") and archive old versions.
+  </Card>
+  <Card title="Analytics" icon="bar-chart-3">
+    Track views, eSignatures, and downloads.
+  </Card>
+</Columns>
+
+### Embed Code Examples
+
+Use these snippets to embed CIM viewers.
+
+<CodeGroup tabs="JavaScript,HTML">
+  ```javascript
+  // Embed in React app
+  const CimViewer = () => (
+    <iframe
+      src="https://cimshare.com/embed/abc123-xyz"
+      width="100%"
+      height="800px"
+      style={{ border: 'none' }}
+    />
+  );
+  ```
+  ```html
+  <!-- Static HTML embed -->
+  <iframe
+    src="https://cimshare.com/embed/abc123-xyz"
+    width="100%"
+    height="800"
+    frameborder="0">
+  </iframe>
+  ```
+</CodeGroup>
+
+## CIM Library Management
+
+Organize multiple CIMs with tags and search.
+
+| Action          | Description                          | Shortcut |
+|-----------------|--------------------------------------|----------|
+| Create Folder   | Group by industry (e.g., SaaS)       | Cmd+K   |
+| Bulk Archive    | Move inactive CIMs to archive        | Shift+A |
+| Export PDF      | Download branded PDF with eSig       | Cmd+P   |
+| Duplicate       | Clone for similar deals              | Cmd+D   |
+
+<Callout kind="success">
+  Your CIMs are encrypted at rest and support CRM integrations like HubSpot or Salesforce.
+</Callout>
+
+This workflow ensures efficient, professional CIM production while maintaining compliance and security.

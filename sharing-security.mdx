@@ -1,0 +1,119 @@
+---
+title: Sharing and Securing CIMs
+description: Learn how to securely share CIMs with clients using password protection and custom URLs.
+---
+
+## Overview
+
+Cimshare lets you generate secure, shareable links for your Confidential Information Memorandums (CIMs). Protect sensitive business data with password protection and custom URLs while tracking client interactions. You control access at every step, from initial sharing to revoking permissions.
+
+<Callout kind="tip">
+  Always use strong, unique passwords for production CIMs. Combine letters, numbers, and symbols for maximum security.
+</Callout>
+
+## Generate Shareable Links
+
+Create custom links in seconds from your CIM dashboard.
+
+<Steps>
+  <Step title="Open CIM" icon="file-text">
+    Navigate to your CIM list and select the document you want to share.
+  </Step>
+  <Step title="Access Share Options" icon="share-2">
+    Click the `Share` button in the top-right corner.
+  </Step>
+  <Step title="Customize Link" icon="link">
+    Enter a custom slug like `acme-deal-2024` to generate `https://cimshare.com/acme-deal-2024`.
+  </Step>
+  <Step title="Copy Link" icon="copy">
+    Click `Copy Link` and send it via email or CRM.
+  </Step>
+</Steps>
+
+## Set Up Password Protection
+
+Require a password to view each CIM. Clients enter it on the share page.
+
+<Tabs>
+  <Tab title="Simple Password" icon="lock">
+    <Steps>
+      <Step title="Enable Protection">
+        Toggle `Password Required` in share settings.
+      </Step>
+      <Step title="Set Password">
+        Enter `Acme2024!Secure` (minimum 8 characters).
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Advanced Options" icon="shield">
+    Set expiration dates or one-time views.
+
+    ```javascript
+    // Example API payload for advanced protection
+    {
+      "protection": {
+        "type": "password",
+        "password": "Acme2024!Secure",
+        "expiresAt": "2024-12-31T23:59:59Z",
+        "maxViews": 5
+      }
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Manage Client Access
+
+Control who views your CIMs with these tools.
+
+<Columns cols={2}>
+  <Card title="Revoke Access" icon="x-circle" href="#">
+    Instantly disable a link. Clients see an access denied page.
+  </Card>
+  <Card title="Whitelist Emails" icon="mail">
+    Allow only specific domains like `@acme.com`.
+  </Card>
+  <Card title="Set Expiry" icon="clock">
+    Links auto-expire after 30 days or a custom date.
+  </Card>
+  <Card title="Download Limits" icon="download">
+    Restrict to view-only or allow 3 downloads max.
+  </Card>
+</Columns>
+
+## Track Shares and Views
+
+Monitor engagement directly from your dashboard.
+
+| Client Email       | Views | Last Viewed     | Downloads | Actions      |
+|--------------------|-------|-----------------|-----------|--------------|
+| john@acme.com      | 5     | 2024-10-15 14:30| 2         | Revoke       |
+| jane@invest.com    | 12    | 2024-10-14 09:15| 1         | Extend       |
+| team@vcfirm.net    | 3     | 2024-10-13 16:45| 0         | Whitelist    |
+
+<Expandable title="Advanced Analytics" default-open="false">
+  View heatmaps of page interactions and export CSV reports.
+
+  <Image
+    src="https://example.com/analytics-heatmap.png"
+    alt="CIM analytics heatmap showing client scroll depth"
+    width="800"
+    height="400"
+  />
+</Expandable>
+
+<Callout kind="success">
+  Shares are encrypted end-to-end. No unauthorized access possible.
+</Callout>
+
+Embed your CIM link in emails or sites for seamless sharing.
+
+<CodeGroup tabs="HTML,Email">
+  ```html
+  <iframe src="https://cimshare.com/acme-deal-2024" width="100%" height="800px"></iframe>
+  ```
+  ```html
+  View CIM: https://cimshare.com/acme-deal-2024
+  Password: Acme2024!Secure
+  ```
+</CodeGroup>

@@ -1,0 +1,142 @@
+---
+title: Changelog
+description: Track the latest updates, new features, and improvements to the Cimshare platform.
+---
+
+## Overview
+
+Cimshare releases updates regularly to enhance CIM creation, sharing, and management. You receive new AI tools, security features, and workflow improvements with each version. Check this page for detailed changelogs, including breaking changes and migration guides.
+
+<Columns cols={3}>
+  <Card title="New Features" icon="sparkles" href="#recent-updates">
+    Discover AI enhancements and eSignature integrations.
+  </Card>
+  <Card title="Bug Fixes" icon="bug" href="#recent-updates">
+    Resolved issues for smoother CIM workflows.
+  </Card>
+  <Card title="Roadmap" icon="map" href="#upcoming">
+    Preview upcoming SDE analysis and CRM tools.
+  </Card>
+</Columns>
+
+<Callout kind="info">
+  Subscribe to our RSS feed or email notifications to get instant alerts on new releases.
+</Callout>
+
+## Recent Updates
+
+<Update label="2024-11-05" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added AI-powered SDE (Seller's Discretionary Earnings) analysis directly from uploaded financials.
+- Integrated DocuSign eSignatures for client approvals on CIMs.
+- Custom branding now supports your logo and color scheme (`#ed8769` by default).
+
+## Improvements
+
+- CIM generation speed increased by `>40%` using optimized website scraping.
+- Enhanced password protection with expiration dates and view limits.
+
+## Bug Fixes
+
+- Fixed CRM contact sync issues with Outlook and Google Workspace.
+- Resolved custom URL sharing errors on mobile devices.
+
+</Update>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- One-click CIM creation from business website URL and your notes.
+- Built-in CRM for tracking client interactions and deal progress.
+
+## Improvements
+
+- Dashboard now shows real-time analytics on CIM views and downloads.
+
+## Bug Fixes
+
+- Patched security vulnerability in shared link access (CVE-2024-XYZ).
+- Corrected eSignature callback failures during high traffic.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Updated API for CIM generation
+  const cim = await cimshare.generate({
+    website: 'https://example-business.com',
+    notes: 'Key highlights from call'
+  });
+  ```
+  ```python
+  # Updated API for CIM generation
+  cim = cimshare.generate(
+      website="https://example-business.com",
+      notes="Key highlights from call"
+  )
+  ```
+</CodeGroup>
+
+</Update>
+
+<Update label="2024-09-10" description="v1.1.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- API endpoint `/v1/cim/create` renamed to `/v2/cim/generate`. Update your integrations.
+
+## New Features
+
+- Password-protected custom URLs for secure CIM sharing.
+- Bulk upload for financial documents.
+
+## Bug Fixes
+
+- Fixed rendering issues with tables in AI-generated CIMs.
+
+</Update>
+
+## How to Stay Updated
+
+Follow these steps to ensure you never miss a release.
+
+<Steps>
+  <Step title="Subscribe to RSS" icon="rss">
+    Add `/rss/changelog.xml` to your feed reader.
+  </Step>
+  <Step title="Enable Notifications" icon="bell">
+    Go to Account Settings > Notifications and toggle changelog emails.
+  </Step>
+  <Step title="Check Dashboard" icon="activity">
+    View release notes directly in your Cimshare dashboard under Updates.
+  </Step>
+</Steps>
+
+## Update Methods
+
+<Tabs>
+  <Tab title="Email" icon="mail">
+    Receive digests weekly with links to full notes.
+  </Tab>
+  <Tab title="GitHub" icon="github">
+    Follow [cimshare/docs](https://github.com/cimshare/docs) for commits and tags.
+  </Tab>
+  <Tab title="API Webhook" icon="zap">
+    Set up webhooks for automated deployment triggers.
+  </Tab>
+</Tabs>
+
+## Upcoming Features
+
+<Expandable title="Roadmap Preview" default-open="false">
+
+- Advanced AI for financial forecasting in CIMs (Q4 2024).
+- Native mobile app for on-the-go CIM reviews.
+- Enterprise CRM integrations with Salesforce.
+
+<Callout kind="tip">
+  Suggest features via our feedback form.
+</Callout>
+
+</Expandable>

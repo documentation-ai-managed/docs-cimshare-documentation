@@ -1,0 +1,87 @@
+{
+  "name": "Cimshare Documentation",
+  "initialRoute": "introduction",
+  "colors": {
+    "light": {
+      "brand": "#ed8769"
+    },
+    "dark": {
+      "brand": "#f2a58f"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "icon": "book",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "icon": "rocket",
+            "pages": [
+              {
+                "title": "Introduction",
+                "path": "introduction",
+                "icon": "home"
+              },
+              {
+                "title": "Quick Start",
+                "path": "quickstart",
+                "icon": "zap"
+              }
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "icon": "layers",
+            "pages": [
+              {
+                "title": "Platform Features",
+                "path": "platform-features",
+                "icon": "grid"
+              },
+              {
+                "title": "Creating CIMs",
+                "path": "creating-cims",
+                "icon": "file-text"
+              }
+            ]
+          },
+          {
+            "group": "Guides",
+            "icon": "compass",
+            "pages": [
+              {
+                "title": "Sharing & Security",
+                "path": "sharing-security",
+                "icon": "shield"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "icon": "code",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "icon": "terminal",
+            "openapi": "openapi.yaml"
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "icon": "clock",
+        "pages": [
+          {
+            "title": "Release History",
+            "path": "changelog",
+            "icon": "history"
+          }
+        ]
+      }
+    ]
+  }
+}
