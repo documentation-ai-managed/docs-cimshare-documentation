@@ -1,21 +1,28 @@
 ---
 title: Core Features of Cimshare
-description: Explore the advanced capabilities that enhance your workflow, including integrations and branding options.
+description: >-
+  Explore the advanced capabilities that enhance your workflow, including
+  integrations and branding options.
 ---
-
 ## Overview
 
 Cimshare empowers brokers and advisors with powerful tools to create, share, and manage Confidential Information Memorandums (CIMs). You input notes and a business website, and AI generates professional CIMs. Key features include secure eSignatures, automated SDE analysis, built-in CRM, and customizable branding for seamless client sharing.
 
-<Columns cols={3}>
-  <Card title="eSignatures" icon="edit-3" href="/docs/esignatures">
+<Columns cols="3">
+  <Card title="eSignatures" href="/docs/esignatures" icon="edit-3" horizontal="false">
     Collect legally binding approvals with one-click workflows.
   </Card>
-  <Card title="SDE Analysis" icon="bar-chart-3" href="/docs/sde-tools">
+
+  <Card title="SDE Analysis" href="/docs/sde-tools" icon="bar-chart-3" horizontal="false">
     Automate Seller's Discretionary Earnings calculations instantly.
   </Card>
-  <Card title="CRM Integration" icon="users" href="/docs/crm">
+
+  <Card title="CRM Integration" href="/docs/crm" icon="users" horizontal="false">
     Track leads and deals directly within your CIM platform.
+  </Card>
+
+  <Card title="Webhooks" href="/webhooks" icon="lucide-webhook" horizontal="false" target="_self">
+    Card description...
   </Card>
 </Columns>
 
@@ -24,18 +31,20 @@ Cimshare empowers brokers and advisors with powerful tools to create, share, and
 Streamline deal approvals with integrated eSignatures. Clients review and sign CIMs securely without leaving the platform. Cimshare supports multi-party approvals and audit trails.
 
 <Steps>
-  <Step title="Upload CIM" icon="upload">
+  <Step title="Upload CIM" icon="upload" title-type="p">
     Share your generated CIM via custom URL.
   </Step>
-  <Step title="Request Signature" icon="edit-3">
+
+  <Step title="Request Signature" icon="edit-3" title-type="p">
     Add signers and set expiration dates.
   </Step>
-  <Step title="Track Status" icon="check-circle">
+
+  <Step title="Track Status" icon="check-circle" title-type="p">
     Monitor progress with real-time notifications.
   </Step>
 </Steps>
 
-<Callout kind="tip">
+<Callout kind="tip" collapsed="false">
   Enable `requireApproval` in your project settings for mandatory reviews before sharing.
 </Callout>
 
@@ -53,6 +62,7 @@ Perform accurate Seller's Discretionary Earnings (SDE) analysis with AI-powered 
     console.log(analysis.sde); // e.g., 450000
     ```
   </Tab>
+
   <Tab title="Advanced Config" icon="settings">
     ```javascript
     const config = {
@@ -69,36 +79,34 @@ Perform accurate Seller's Discretionary Earnings (SDE) analysis with AI-powered 
 
 Manage your entire pipeline within Cimshare. Track CIM views, signature status, and follow-ups. Integrate with existing tools for seamless data sync.
 
-| Feature | Description | Benefit |
-|---------|-------------|---------|
+| Feature       | Description                 | Benefit                  |
+| ------------- | --------------------------- | ------------------------ |
 | Lead Tracking | Auto-capture viewer details | Prioritize hot prospects |
-| Deal Stages | Custom pipelines | Visualize progress |
-| Reminders | Automated follow-ups | Never miss a deal |
+| Deal Stages   | Custom pipelines            | Visualize progress       |
+| Reminders     | Automated follow-ups        | Never miss a deal        |
 
 <Expandable title="Advanced CRM API Integration" default-open="false">
+  Connect via REST API:
 
-Connect via REST API:
-
-````jsx
-<CodeGroup tabs="JavaScript,Python">
-```javascript
-const crm = await cimshare.crm.createLead({
-  email: "client@example.com",
-  cimId: "cim_123",
-  stage: "review"
-});
-```
-```python
-import cimshare
-lead = cimshare.CRM.create_lead(
-    email="client@example.com",
-    cim_id="cim_123",
-    stage="review"
-)
-```
-</CodeGroup>
-````
-
+  ````jsx
+  <CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  const crm = await cimshare.crm.createLead({
+    email: "client@example.com",
+    cimId: "cim_123",
+    stage: "review"
+  });
+  ```
+  ```python
+  import cimshare
+  lead = cimshare.CRM.create_lead(
+      email="client@example.com",
+      cim_id="cim_123",
+      stage="review"
+  )
+  ```
+  </CodeGroup>
+  ````
 </Expandable>
 
 ## Customizable Branding and Sharing
@@ -113,7 +121,7 @@ graph TD
     D --> E[Track Views & Signatures]
 ```
 
-<Callout kind="success">
+<Callout kind="success" collapsed="false">
   Use brand color `#ed8769` for accents to match your firm's identity.
 </Callout>
 
